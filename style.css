@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(197, 188, 188), rgb(254,215,173));
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.logo span{
+    color: rgb(109,67, 0);
+    text-shadow: 0 0 10px rgb(109,67, 0);
+}
+.hamburg, .cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    font-size: 2rem;
+    display: none;
+}
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(109,67, 0);
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .contact-btn{
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(109,67, 0);
+    transition: 0.2s linear;
+}
+.nav-container .contact-btn a{
+    color: rgb(20, 18, 18);
+    transition: 0.3s linear;
+}
+.nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
+    background-color: rgb(109,67, 0);
+    color: white;
+}
+.nav-container .links a:hover{
+    color: rgb(10, 241, 172);
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: rgb(109,67, 0);
+}
+section{
+    width: 100%;
+    height: 90vh;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-container .image{
+    z-index: -1;
+    width: 50%;
+}
+.main-container .image img{
+    width: 100%;
+   border-radius: 100%;
+    
+}
+.main-container .content{
+    color: black;
+    width: 40%;
+    min-height: 100px;
+}
+.content h1{
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+.content h1 span{
+    color: rgb(109,67, 0);
+    text-shadow: 0 0 10px rgb(109,67, 0);
+}
+.content .typewriter{
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+.content .typewriter span{
+    color: rgb(109,67, 0);
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgb(109,67, 0);
+    position: relative;
+    transition: 0.3s linear;
+}
+.typewriter span::before{
+    content: "Developer";
+    animation: words 15s infinite;
+}
+.typewriter span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    animation:  cursor 0.6s linear infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+@keyframes words {
+    0%, 33%{
+        content: "Developer";
+    }
+    34%, 66%{
+        content: "Designer";
+    }
+    67%, 100%{
+        content: "Junior SQ Eng";
+    }
+}
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color:transparent;
+    border: 0.2rem solid rgb(109,67, 0);
+    border-radius: 50%;
+    color:rgb(109,67, 0);
+    margin: 5px 10px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+.social-links i:hover{
+    scale: 1.3;
+    color: white;
+    background-color: rgb(109,67, 0);
+    filter: drop-shadow(0 0 10px rgb(109,67,0));
+}
+.content button{
+    width: 40%;
+    height: 6vh;
+    margin: 30px;
+    background-color: rgb(109,67, 0);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+.content button:hover{
+ scale: 1.1;
+ color: rgb(109,67, 0);
+ border: 2px solid rgb(109,67, 0);
+ background-color: transparent;
+ font-weight: 700;
+ box-shadow: 0 0 40px rgb(109,67, 0);
+}
+@media (max-width:884px) {
+    body{
+        overflow-y: visible;
+    }
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,.cancel{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .cancel{
+        color: white;
+    }
+    .main-container .image{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+}
+ 
+ .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.modal-content h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+.modal-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+.close-btn {
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.close-btn:hover {
+    background: #444;
+}
+
+.blog-container {
+    max-height: 350px; /* Adjust as needed */
+    overflow-y: auto; /* Add vertical scrolling */
+    margin-top: 10px;
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+
+.blog-post {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc; /* Divider between blogs */
+}
+
+.blog-post h3 {
+    margin: 0 0 5px;
+}
+
+.blog-post p {
+    margin: 0;
+}
+
+.modal-content {
+    max-height: 80%; /* Ensure the modal doesn't exceed the screen height */
+    overflow: hidden; /* Prevent overflow outside modal */
+}

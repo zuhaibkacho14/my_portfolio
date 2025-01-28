@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Zuhaib Hassan Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Zuhaib Hassan</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#" onclick="openModal('about')">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#" onclick="openModal('skills')">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#" onclick="openModal('services')">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#" id="openBlogs" onclick="openModal('blogs')">Blogs</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="mailto:zuhaibkacho12@gmail.com">Contact Us</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="">Home</a>
+                <a href="#" onclick="openModal('about')">About</a>
+                <a href="#" onclick="openModal('skills')">Skills</a>
+                <a href="#" onclick="openModal('services')">Services</a>
+                <a href="#" id="openBlogs" onclick="openModal('blogs')">Blogs</a>
+                <a href="mailto:zuhaibkacho12@gmail.com">Contact Us</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+        <section>
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                    <img src="kkk.png" alt="">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Zuhaib Hassan</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
+                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000"> Hi! I'm Zuhaib Hassan, a Computer Science student at Iqra University. Passionate about coding, designing and problem-solving, I'm on a continuous journey of learning and growing in the tech field. </p>
+                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                        <a href="https://github.com/zuhaibkacho14" ><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.tiktok.com/@aboutcoding_zhk"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/kacho-zuhaib-hassan-292b9a2b4/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@aboutCoding-zhk"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                        <a href="Zuhaib Hassan - resume.pdf" download="My_Resume.pdf">
+                        <button>Download CV</button>
+                        </a>
+                    <div>
+                </div>
+            </div>
+        </section>
+        <div id="about-modal" class="modal">
+            <div class="modal-content">
+                <h2>About Me</h2>
+                <p>Hi, I'm <b>Zuhaib Hassan</b>, a Computer Science graduate from Iqra University, based in Lahore, Pakistan.  
+                    Passionate about coding and problem-solving, I have experience in C#, .NET WinForms, and web technologies like HTML, CSS, and PHP.  
+                    My notable projects include an Employee Management System, a hotel website, and a Global Education App designed to assist students with study opportunities worldwide.  
+                    Outside of work, I enjoy exploring tech trends, writing blogs about programming, and sipping tea. </p>
+                <button class="close-btn" onclick="closeModal('about')">Close</button>
+            </div>
+        </div>
+    
+        <div id="skills-modal" class="modal">
+            <div class="modal-content">
+                <h2>Skills</h2>
+                <p>My skillset includes C#, HTML, CSS, JavaScript, .NET, SQL, and more!</p>
+                <button class="close-btn" onclick="closeModal('skills')">Close</button>
+            </div>
+        </div>
+    
+        <div id="services-modal" class="modal">
+            <div class="modal-content">
+                <h2>Services</h2>
+                <p>I provide services like website development, UI design, and basic application development.</p>
+                <button class="close-btn" onclick="closeModal('services')">Close</button>
+            </div>
+        </div>
+    
+        
+        <div id="blogs-modal" class="modal">
+            <div class="modal-content">
+                <h2>My Blogs</h2>
+                
+                <div class="blog-container">
+                    <div class="blog-post">
+                        <h3>1: Why I Chose Computer Science as My Career Path</h3>
+                        <p> <b style="color: black;">Introduction:</b><br>
+                            Since childhood, I've been fascinated by how technology simplifies complex tasks. My curiosity about how apps, games, and websites function led me to choose Computer Science as my career.
+                            
+                            <br><b style="color: black;">My Journey:</b><br>
+                            When I wrote my first "Hello World!" program, I realized the immense potential of coding. Over time, I developed projects like a stopwatch in C# and an employee management system (EMS) using C# .NET and SQL Server. These projects not only tested my technical skills but also sparked my passion for solving real-world problems with code.
+                            
+                            <br><b style="color: black;">The Future:</b><br>
+                            As I continue learning and growing, I aim to build innovative software solutions that make a global impact. Computer Science has become more than a career—it's a platform for continuous growth and creativity.</p>
+                    </div>
+                    <div class="blog-post">
+                        <h3>2: Top 5 Skills Every Aspiring Developer Should Learn</h3>
+                        <p>Being a developer requires more than just knowing how to code. Here are the top skills I believe every developer should master:
+
+                            <br><b style="color: black;">Problem-Solving</b><br>
+                            Coding is all about solving problems. Breaking down complex challenges into smaller tasks has been key in my journey. For example, debugging my EMS project taught me resilience.
+                            
+                            <br><b style="color: black;">Web Development</b><br>
+                            Building websites like my portfolio and a basic-level hotel website (using HTML, CSS, and PHP) helped me understand how to create user-friendly designs.
+                            
+                            <br><b style="color: black;">Database Management</b><br>
+                            Databases are the backbone of most applications. My experience with SQL Server during my EMS project taught me how to manage and query data effectively.
+                            
+                            <br><b style="color: black;">Version Control (Git)</b><br>
+                            Tracking changes and collaborating with GitHub has been essential in team projects, especially during my university journey.
+                            
+                            <br><b style="color: black;">Communication</b><br>
+                            Soft skills are just as important. Sharing ideas with peers and working in a group like MT Software House improved my teamwork and presentation skills.
+                        </p>
+                    </div>
+                  
+                  
+                    <button class="close-btn" onclick="closeModal('blogs')">Close</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+            
+            function openModal(section) {
+            document.getElementById(`${section}-modal`).style.display = 'flex';
+            }
+
+            
+            function closeModal(section) {
+            document.getElementById(`${section}-modal`).style.display = 'none';
+            }
+            
+            document.getElementById('openBlogs').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('blogs-modal').style.display = 'flex';
+            });
+
+           
+            function closeModal(section) {
+            document.getElementById('blogs-modal').style.display = 'none';
+            }
+            window.onclick = function (event) {
+            const modal = document.getElementById('blogs-modal');
+            if (event.target === modal) {
+            modal.style.display = 'none';
+            }
+            };
+            
+            function closeModal(section) {
+            document.getElementById(`${section}-modal`).style.display = 'none';
+            }
+        </script>
+</body>
+</html>/
